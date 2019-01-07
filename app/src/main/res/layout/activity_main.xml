@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/c_939393"
+    tools:context=".activity.MainActivity">
+
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp"
+                 android:id="@+id/activity_main_fragment"
+                 app:layout_constraintTop_toTopOf="parent"
+                 app:layout_constraintBottom_toTopOf="@id/activity_main_bottom_root"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="50dp"
+                  android:id="@+id/activity_main_bottom_root"
+                  android:orientation="horizontal"
+                  android:background="@color/c_939393"
+                  app:layout_constraintBottom_toBottomOf="parent">
+
+        <TextView
+                android:id="@+id/activity_main_bottom_status"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:text="@string/status" />
+
+        <TextView
+                android:id="@+id/activity_main_bottom_skill"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:text="@string/field" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

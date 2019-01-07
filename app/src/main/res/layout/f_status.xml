@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:paddingStart="16dp"
+                                             android:paddingEnd="16dp"
+                                             android:background="@color/c_939393">
+    <TextView
+            android:id="@+id/f_status_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/f_status_icon"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="@drawable/ic_status_80"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/f_status_level" />
+
+    <ProgressBar
+            android:id="@+id/f_status_hp_progress"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/status_hp"
+            android:progress="50"
+            app:layout_constraintTop_toTopOf="@id/f_status_icon"
+            app:layout_constraintStart_toEndOf="@id/f_status_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/f_status_mp_progress"/>
+
+    <TextView
+            android:id="@+id/f_status_hp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="@id/f_status_hp_progress"
+            app:layout_constraintTop_toTopOf="@id/f_status_hp_progress"
+            app:layout_constraintBottom_toBottomOf="@id/f_status_hp_progress"
+            app:layout_constraintEnd_toEndOf="@id/f_status_hp_progress"/>
+
+    <ProgressBar
+            android:id="@+id/f_status_mp_progress"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/status_mp"
+            android:progress="50"
+            app:layout_constraintTop_toBottomOf="@id/f_status_hp_progress"
+            app:layout_constraintStart_toEndOf="@id/f_status_icon"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/f_status_icon"/>
+
+    <TextView
+            android:id="@+id/f_status_mp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="@id/f_status_mp_progress"
+            app:layout_constraintTop_toTopOf="@id/f_status_mp_progress"
+            app:layout_constraintBottom_toBottomOf="@id/f_status_mp_progress"
+            app:layout_constraintEnd_toEndOf="@id/f_status_mp_progress"/>
+
+    <ProgressBar
+            android:id="@+id/f_status_exp_progress"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/status_exp"
+            android:progress="50"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/f_status_icon"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+            android:id="@+id/f_status_exp_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toStartOf="@id/f_status_exp_progress"
+            app:layout_constraintTop_toTopOf="@id/f_status_exp_progress"
+            app:layout_constraintBottom_toBottomOf="@id/f_status_exp_progress"
+            app:layout_constraintEnd_toEndOf="@id/f_status_exp_progress"/>
+
+    <TextView
+        android:id="@+id/f_status_str_title"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@android:color/white"
+        android:text="@string/str"
+        android:textSize="20sp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/f_status_exp_text"/>
+
+    <TextView
+            android:id="@+id/f_status_str_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/f_status_str_title"
+            app:layout_constraintTop_toTopOf="@id/f_status_str_title"
+            app:layout_constraintBottom_toBottomOf="@id/f_status_str_title" />
+
+    <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/f_status_str_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/btn_plus"
+            app:layout_constraintTop_toTopOf="@id/f_status_str_title"
+            app:layout_constraintBottom_toBottomOf="@id/f_status_str_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+            android:id="@+id/f_status_def_title"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/white"
+            android:text="@string/def"
+            android:textSize="20sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/f_status_str_title"/>
+
+    <TextView
+            android:id="@+id/f_status_def_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/f_status_def_title"
+            app:layout_constraintTop_toTopOf="@id/f_status_def_title"
+            app:layout_constraintBottom_toBottomOf="@id/f_status_def_title" />
+
+    <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/f_status_def_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/btn_plus"
+            app:layout_constraintTop_toTopOf="@id/f_status_def_title"
+            app:layout_constraintBottom_toBottomOf="@id/f_status_def_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+            android:id="@+id/f_status_hp_title"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/white"
+            android:text="@string/hp"
+            android:textSize="20sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/f_status_def_title"/>
+
+    <TextView
+            android:id="@+id/f_status_hp_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/f_status_hp_title"
+            app:layout_constraintTop_toTopOf="@id/f_status_hp_title"
+            app:layout_constraintBottom_toBottomOf="@id/f_status_hp_title" />
+
+    <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/f_status_hp_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/btn_plus"
+            app:layout_constraintTop_toTopOf="@id/f_status_hp_title"
+            app:layout_constraintBottom_toBottomOf="@id/f_status_hp_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+            android:id="@+id/f_status_mp_title"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@android:color/white"
+            android:text="@string/mp"
+            android:textSize="20sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/f_status_hp_title"/>
+
+    <TextView
+            android:id="@+id/f_status_mp_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@id/f_status_mp_title"
+            app:layout_constraintTop_toTopOf="@id/f_status_mp_title"
+            app:layout_constraintBottom_toBottomOf="@id/f_status_mp_title" />
+
+    <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/f_status_mp_plus"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:visibility="gone"
+            app:srcCompat="@drawable/btn_plus"
+            app:layout_constraintTop_toTopOf="@id/f_status_mp_title"
+            app:layout_constraintBottom_toBottomOf="@id/f_status_mp_title"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

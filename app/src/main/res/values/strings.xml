@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">TextGame</string>
+    <string name="touch_start">터치하여 시작</string>
+    <string name="finish">한번 더 누르면 종료됩니다</string>
+    <string name="str">힘</string>
+    <string name="def">맷집</string>
+    <string name="hp">체력</string>
+    <string name="mp">패기</string>
+    <string name="status">상태</string>
+    <string name="field">이동</string>
+    <string name="field_vertical">l</string>
+    <string name="field_horizontal">ㅡ</string>
+    <string name="field_center">광장</string>
+    <string name="field_equipment_shop">장비 상점</string>
+    <string name="field_tool_shop">도구 상점</string>
+</resources>
