@@ -5,12 +5,43 @@
     <string name="str">힘</string>
     <string name="def">맷집</string>
     <string name="hp">체력</string>
-    <string name="mp">패기</string>
+    <string name="mp">마력</string>
     <string name="status">상태</string>
     <string name="field">이동</string>
-    <string name="field_vertical">l</string>
-    <string name="field_horizontal">ㅡ</string>
+    <string name="field_l_r">─</string>
+    <string name="field_l_u">┘</string>
+    <string name="field_l_d">┐</string>
+    <string name="field_l_u_r">┴</string>
+    <string name="field_l_u_d">┤</string>
+    <string name="field_l_r_d">┬</string>
+    <string name="field_u_r">└</string>
+    <string name="field_u_d">│</string>
+    <string name="field_u_r_d">├</string>
+    <string name="field_r_d">┌</string>
+    <string name="field_l_u_r_d">┼</string>
+    <string name="field_next"><![CDATA[<font color="#670000">%1$s</font>]]></string>
+    <string name="field_my"><![CDATA[<font color="#030066">%1$s</font>]]></string>
     <string name="field_center">광장</string>
     <string name="field_equipment_shop">장비 상점</string>
     <string name="field_tool_shop">도구 상점</string>
+    <string name="battle_atk">공격</string>
+    <string name="battle_def">방어</string>
+    <string name="battle_skill">스킬</string>
+    <string name="battle_run">도망</string>
+    <string name="battle_item">아이템</string>
+    <string name="battle_left">왼쪽</string>
+    <string name="battle_right">오른쪽</string>
+    <string name="battle_up">위</string>
+    <string name="battle_back">아래</string>
+    <string name="battle_return">마을</string>
+    <string name="battle_next">이동</string>
+    <string name="battle_help">\"도움말\"을 입력하면 명령어를 확인 할 수 있습니다.</string>
+    <string name="battle_help_desc">
+        <![CDATA[<font color="#670000">\"공격\", \"공\", \"쳐\"</font><br>상대방을 공격하여 데미지를 입힐 수 있습니다.<br>
+        <font color="#664B00">\"스킬\", \"특수공격\", \"가위바위보\"</font><br>상대방에게 가위바위보 대전을 신청합니다.<br>
+        <font color="#002266">\"방어\", \"방\", \"막기\"</font><br>상대방의 공격을 방어하여 데미지를 최소화 합니다.<br>
+        <font color="#22741C">\"아이템\", \"템\", \"물약\"</font><br>아이템 목록을 볼 수 있습니다.<br>
+        <font color="#660033">\"도망\"</font><br>전투를 포기하고 도망 갈 수 있습니다.<br>
+        가위바위보 대전은 현재 MP를 모두 소모하며, 승리 시 큰 데미지를 입힐 수 있습니다. 하지만 패배한다면?]]> </string>
+    <string name="move_block">이동 할 수 없는 곳 입니다.</string>
 </resources>

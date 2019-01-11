@@ -15,6 +15,10 @@ object UserStatus {
     var realDef : Long = 0
     var currExp : Long = 0
     var nextExp : Long = 0
+    var minStr = 0.7
+    var minDef = 0.4
+    var weaponAtk = 5
+    var weaponDef = 5
 
     fun setRealStr() {
         var value = 0.0
@@ -31,7 +35,7 @@ object UserStatus {
             }
         }
 
-        realStr = value.toLong()
+        realStr = value.toLong() + weaponAtk
     }
 
     fun setRealDef() {
@@ -48,7 +52,7 @@ object UserStatus {
             }
         }
 
-        realDef = value.toLong()
+        realDef = value.toLong() +  weaponDef
     }
 
     fun setNextExp() {

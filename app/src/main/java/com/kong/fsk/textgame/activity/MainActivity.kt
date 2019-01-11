@@ -1,5 +1,6 @@
 package com.kong.fsk.textgame.activity
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.View
@@ -19,6 +20,10 @@ class MainActivity : AppCompatActivity() {
             when(v?.id) {
                 R.id.activity_main_bottom_status ->
                     FragmentController.show(FragmentController.STATUS_FRAGMENT, null, supportFragmentManager)
+                R.id.activity_main_bottom_skill -> {
+                    startActivity(Intent(baseContext, BattleActivity::class.java))
+                    finish()
+                }
             }
         }
     }

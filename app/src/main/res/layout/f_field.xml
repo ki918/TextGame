@@ -6,7 +6,7 @@
                                              android:background="@color/c_939393">
 
     <TextView
-            android:id="@+id/f_field"
+            android:id="@+id/f_field_center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@android:color/white"
@@ -16,6 +16,28 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toBottomOf="parent"
+    />
+
+    <include
+            layout="@layout/i_field_horizontal"
+            android:id="@+id/equipment_center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/f_field_center"
+            app:layout_constraintEnd_toStartOf="@id/f_field_center"
+            app:layout_constraintBottom_toBottomOf="@+id/f_field_center"
+    />
+
+    <TextView
+            android:id="@+id/f_field_equipment_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:text="@string/field_equipment_shop"
+            app:layout_constraintTop_toTopOf="@id/f_field_center"
+            app:layout_constraintEnd_toStartOf="@id/equipment_center"
+            app:layout_constraintBottom_toBottomOf="@id/f_field_center"
     />
 
 </android.support.constraint.ConstraintLayout>

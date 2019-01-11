@@ -1,7 +1,7 @@
 package data
 
 import util.LogUtil
-import java.util.*
+import util.Utils
 
 
 object MonsterStatus {
@@ -19,6 +19,8 @@ object MonsterStatus {
     var realDef : Long = 0
     var point : Int = 0
     var exp : Long = 0
+    var minStr = 0.9
+    var minDef = 0.6
 
     override fun toString(): String {
         return """
@@ -50,7 +52,11 @@ object MonsterStatus {
             }
         }
 
-        realStr = value.toLong()
+        var v = (level / 10)
+        v++
+        val minAtk = Utils.rand(v, v + Math.ceil(v * 0.5).toInt())
+
+        realStr = value.toLong() + minAtk
     }
 
     fun setRealDef() {
@@ -130,8 +136,8 @@ object MonsterStatus {
 
         if(maxPoint <= 0) return
 
-        val min = if(level == 1 || Math.round(point.toLong() / 4.0f) <= 4) 1 else rand(1, Math.round(point.toLong() / 4.0f))
-        val value = if(maxPoint <= 1 || (level <= 5 && applyCount ==3)) 1 else rand(min, maxPoint).toLong()
+        val min = if(level == 1 || Math.round(point.toLong() / 4.0f) <= 4) 1 else Utils.rand(1, Math.round(point.toLong() / 4.0f))
+        val value = if(maxPoint <= 1 || (level <= 5 && applyCount ==3)) 1 else Utils.rand(min, maxPoint).toLong()
 
         when(applyCount) {
             0 ->
@@ -146,6 +152,4 @@ object MonsterStatus {
 
         point -= value.toInt()
     }
-
-    fun rand(from : Int, to : Int) = Random().nextInt(to - from) + from
 }

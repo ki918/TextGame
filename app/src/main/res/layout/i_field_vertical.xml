@@ -5,5 +5,5 @@
         android:layout_height="wrap_content"
         android:textColor="@android:color/white"
         android:textSize="20sp"
-        android:text="@string/field_vertical"
+        android:text="@string/field_u_d"
 />
